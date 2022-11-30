@@ -6,8 +6,10 @@ import LifeStatus from "../../common/LifeStatus";
 
 
 export default function Start(){
+    const navigation = useNavigation()
+
     const handleNavAppExplanation = () => {
-        console.log('FOi o click')
+        navigation.navigate("AppExplanation")
     }
 return(
         <View style={styles.container}>
