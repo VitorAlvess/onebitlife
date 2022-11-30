@@ -1,10 +1,13 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View, handleNavHome } from "react-native";
 import DefaulButton from "../../common/DefaultButton";
 import ExplanationCard from "../../common/explanation/ExplanationCard";
 export default function AppExplanation(){
-    function handleSetShowHome(){
-        console.log('TELA HOME CLICk')
+    const navigation = useNavigation()
+
+    function handleNavHome(){
+        navigation.navigate('Home')
     }
 
 
@@ -22,7 +25,7 @@ export default function AppExplanation(){
                     <Text style={styles.description}>
                         Na próxima tela você vai poder escolher {'\n'} seus 4 hábitos de forma individual
                     </Text>
-                    <DefaulButton buttonText={'Continuar'} handlePress={handleSetShowHome} width={250} height={50}/>
+                    <DefaulButton buttonText={'Continuar'} handlePress={handleNavHome} width={250} height={50}/>
                 </View>
             </ScrollView>
         </View>
