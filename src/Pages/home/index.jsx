@@ -2,6 +2,8 @@ import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import LifeStatus from "../../common/LifeStatus";
+import StatusBar from "../../home/StatusBar";
+
 
 export default function Home(){
     const navigation = useNavigation();
@@ -13,10 +15,11 @@ export default function Home(){
     return(
         <View style={style.container}>
             <ScrollView>
-                <View style={{alignItems: 'center'}}>
+                <View style={{alignItems:'center'}}>
                     <Text style={style.dailyChecks}> ❤ 20 dias - ✔️ 80 checks </Text>
 
                     <LifeStatus />
+                    <StatusBar />
 
                     
                 </View>
